@@ -1,0 +1,999 @@
+/*
+Theme Name: 	ZSL Master Theme
+Theme URI: 		TBA
+Description: 	London Zoological Society Master theme
+Version: 		1.0
+Author: 		David Williams
+Author URI: 	http://djave.co.uk
+*/
+/*
+ * Mixin for clearfix
+ * @include clearfix;
+*/
+/*
+ * Mixin for overall page centering
+ * @include inside;
+*/
+/*
+ * Apply a CSS3 box-shadow
+ * @include boxShadow(5px, 5px, 10px, #000);
+ */
+/*
+ * Apply an inset CSS3 box-shadow
+ * @include insetBoxShadow(5px, 5px, 10px, #000);
+ */
+/*
+ * Apply a CSS3 border radius
+ * @include borderRadius(4px);
+ */
+/*
+ * Apply a CSS3 border radius to the top corners only
+ * @include borderTopRadius(4px);
+ */
+/*
+ * Apply a CSS3 border radius to the right corners only
+ * @include borderRightRadius(4px);
+ */
+/*
+ * Apply a CSS3 border radius to the bottom corners only
+ * @include borderBottomRadius(4px);
+ */
+/*
+ * Apply a CSS3 border radius to the left corners only
+ * @include borderLeftRadius(4px);
+ */
+/*
+ * Stop people accidentally selecting stuff
+ * @include userSelect(none);
+ */
+/*
+ * Apply a CSS3 linear gradient
+ *
+ * $from - The original colour stop of the gradient, eg #FF0000 or #FF0000 20%
+ * $to - The final colour stop of the gradient
+ * $fallback - A fallback background-color; if none is provided, the $from colour is used
+ * $start - The starting point of the gradient
+ *
+ * @include linearGradient(red, green);
+ * @include linearGradient(red, green, transparent);
+ * @include linearGradient(red 50%, green 100%);
+ */
+/*
+ * Apply a CSS3 box-rotate
+ * @include boxRotate(10deg);
+ */
+/*
+ * Box sizing
+ * content-box | border-box | padding-box
+ * @include boxSizing(border-box);
+ */
+/*
+ * Apply a CSS3 transform-origin
+ * @include setTransformOrigin(origin);
+ */
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+01 Sensible defaults ----------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+div,
+article,
+section,
+header,
+footer,
+nav,
+li {
+  position: relative;
+  /* For absolutely positioning elements within containers (add more to the list if need be) */
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+body {
+  background: #fff;
+  /* Don't forget to style your body to avoid user overrides */
+}
+
+::-moz-selection {
+  background: #ff0;
+  color: #333;
+}
+
+::selection {
+  background: #ff0;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 a, h2 a {
+  color: inherit;
+}
+
+ul {
+  padding-left: 1.2em;
+  margin: 1em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.alignleft {
+  float: left;
+  margin: 10px 20px 10px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 10px 0 10px 20px;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+
+.alignnone {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.alignnone a {
+  display: block;
+  width: 100%;
+}
+.alignnone a img {
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+  margin: 1em 0;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+02 Typography -----------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/*
+
+14 / 16	= 		0.875em 		(14px equivalent)
+16 / 16	= 		1em 			(16px equivalent)
+18 / 16 = 		1.125em 		(18px equivalent)
+21 / 16 = 		1.3125em 		(21px equivalent)
+24 / 16 = 		1.5em 			(24px equivalent)
+30 / 16 = 		1.875em 		(30px equivalent)
+
+*/
+body,
+input,
+textarea {
+  /* We strongly recommend you declare font-weight using numerical values, but check to see which weights you're exporting first */
+}
+
+h1 {
+  font-size: 2em;
+  font-family: "Montserrat", Rockwell, serif;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family: "Montserrat", Rockwell, serif;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-family: "Montserrat", Rockwell, serif;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: .83em;
+}
+
+h6 {
+  font-size: .75em;
+}
+
+body {
+  font-family: "Roboto Slab", Tahoma, sans-serif;
+  background: #e67e22;
+  color: #fff;
+  line-height: 1.6;
+}
+
+article p {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px;
+}
+a:hover {
+  background: #fff;
+  color: #e67e22;
+}
+
+h1 a {
+  background: transparent;
+}
+
+.disabled {
+  opacity: 0.6;
+}
+
+pre, code, .inline-code {
+  font-family: 'Source Code Pro';
+  font-size: 14px;
+}
+
+.inline-code {
+  background: rgba(0, 0, 0, 0.2);
+  color: #eee;
+  display: inline-block;
+  padding: 0 0.3em;
+}
+
+pre {
+  word-wrap: break-word;
+  background: #000;
+  padding: 1em;
+  border: 5px solid #34495e;
+}
+
+/*---------------------------------------------------------------------
+I made these grids incredibly easily with gridpak.com, great
+for visually creating your own grids.  I then copied a few variations
+and wrapped them in different class names.
+
+I M P O R T A N T
+
+All columns should follow this layout
+
+<div class="columns-5">
+	<div class="row">
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+	</div>
+</div>
+
+<div class="columns-4">
+	<div class="row">
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+	</div>
+</div>
+
+<div class="columns-3">
+	<div class="row">
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+		<div class="col">Content</div>
+	</div>
+</div>
+
+----------------------------------------------------------------------- */
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+.row {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*---------------------------------------------------------------------
+Reusable column class : )
+----------------------------------------------------------------------- */
+.col {
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+
+/* 5 Column Grid
+-----------------------------------------------------------------------------
+Span 1:    19.2%
+Span 2:    39.4%
+Span 3:    59.6%
+Span 4:    79.8%
+Span 5:    100%
+----------------------------------------------------------------------------- */
+.col {
+  width: 93%;
+  margin: 0 2%;
+  padding: 0 1.5%;
+}
+
+@media screen and (min-width: 500px) {
+  .col {
+    margin: 0;
+  }
+
+  /* 3 column grid
+  -----------------------------------------------------------------------------
+  Span 1:    32.0%
+  Span 2:    66.0%
+  Span 3:    100%
+  ----------------------------------------------------------------------------- */
+  .columns-3 {
+    /*---------------------------------------------------------------------
+    Span multiple columns.  Replace with semantic class names, ie: ".span_1, .info"
+    ----------------------------------------------------------------------- */
+  }
+  .columns-3 .col {
+    margin-left: 2%;
+    padding: 0 1.5%;
+    width: 32.0%;
+  }
+  .columns-3 .row .col:first-child {
+    margin-left: 0;
+  }
+  .columns-3 .span_1 {
+    width: 32.0%;
+  }
+  .columns-3 .span_2 {
+    width: 66.0%;
+  }
+  .columns-3 .span_3 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* 2 Column Grid
+  -----------------------------------------------------------------------------
+  Span 1:    49.0%
+  Span 2:    100%
+  ----------------------------------------------------------------------------- */
+  .columns-2 .col, .columns-4 .col, .columns-5 .col {
+    margin-left: 2%;
+    padding: 0 1.5%;
+    width: 49%;
+  }
+  .columns-2 .row .col:first-child, .columns-2 .row .col:nth-child(odd), .columns-4 .row .col:first-child, .columns-4 .row .col:nth-child(odd), .columns-5 .row .col:first-child, .columns-5 .row .col:nth-child(odd) {
+    margin-left: 0;
+  }
+  .columns-2 .span_1, .columns-4 .span_1, .columns-5 .span_1 {
+    width: 49.0%;
+  }
+  .columns-2 .span_2, .columns-4 .span_2, .columns-5 .span_2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .columns-5 {
+    /*---------------------------------------------------------------------
+    Span multiple columns.  Replace with semantic class names, ie: ".span_1, .info"
+    ----------------------------------------------------------------------- */
+  }
+  .columns-5 .col {
+    margin-left: 1%;
+    padding: 0 1.5%;
+    width: 19.2%;
+  }
+  .columns-5 .row .col:nth-child(odd) {
+    margin-left: 1%;
+  }
+  .columns-5 .row .col:first-child {
+    margin-left: 0;
+  }
+  .columns-5 .span_1 {
+    width: 19.2%;
+  }
+  .columns-5 .span_2 {
+    width: 39.4%;
+  }
+  .columns-5 .span_3 {
+    width: 59.6%;
+  }
+  .columns-5 .span_4 {
+    width: 79.8%;
+  }
+  .columns-5 .span_5 {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* 4 column grid
+  -----------------------------------------------------------------------------
+  Span 1:    24.25%
+  Span 2:    49.5%
+  Span 3:    74.75%
+  Span 4:    100%
+  ----------------------------------------------------------------------------- */
+  .columns-4 {
+    /*---------------------------------------------------------------------
+    Span multiple columns.  Replace with semantic class names, ie: ".span_1, .info"
+    ----------------------------------------------------------------------- */
+  }
+  .columns-4 .col {
+    margin-left: 1%;
+    padding: 0 1.5%;
+    width: 24.25%;
+  }
+  .columns-4 .row .col:nth-child(odd) {
+    margin-left: 1%;
+  }
+  .columns-4 .row .col:first-child {
+    margin-left: 0;
+  }
+  .columns-4 .span_1 {
+    width: 24.25%;
+  }
+  .columns-4 .span_2 {
+    width: 49.5%;
+  }
+  .columns-4 .span_3 {
+    width: 74.75%;
+  }
+  .columns-4 .span_4 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+.wrapper {
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.slam {
+  display: none;
+}
+
+input, textarea {
+  color: #333333;
+  border: none;
+  padding: 2px 4px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+button, input[type=submit] {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+  color: #fff;
+}
+button:hover, input[type=submit]:hover {
+  background: #fff;
+  color: #333333;
+}
+
+.menu {
+  padding: 0;
+}
+.menu li {
+  display: inline;
+}
+
+.site-header {
+  border: none;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+  margin: 1em 0;
+}
+
+.footer {
+  width: 95%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#cookies-warning {
+  display: none;
+}
+
+.block-span span {
+  text-decoration: none;
+  color: #fff;
+  display: inline;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3px;
+}
+.block-span span:hover {
+  background: #fff;
+  color: #e67e22;
+}
+
+.active {
+  background: #fff;
+}
+
+.post {
+  margin-bottom: 3em;
+}
+
+.blog-pages a {
+  margin: 0 3px;
+}
+
+.twitter ul {
+  padding-left: 0;
+  padding: 0;
+}
+.twitter ul li {
+  font-size: 0.8em;
+}
+
+aside.widget {
+  padding-bottom: 0.6em;
+}
+aside.widget ul {
+  margin-top: 0;
+  padding-left: 0;
+}
+aside.widget h3 {
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid #efac16;
+  margin-bottom: 0;
+}
+aside.widget li {
+  list-style: none;
+  padding: 1em 0 1em;
+  border-bottom: 1px solid #cecece;
+}
+aside.widget li img {
+  width: 35%;
+  margin-right: 5%;
+  height: auto;
+  display: block;
+  float: left;
+}
+
+footer .widget h3, .home-quote-widgets .widget h3 {
+  padding-bottom: 0.2em;
+  border-bottom: 3px solid #efac16;
+  margin-bottom: 0;
+}
+
+.zsl-recent-posts .thumb {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #cecece;
+}
+.zsl-recent-posts .thumb li {
+  width: 48%;
+  margin: 0 4% 4% 0;
+  border: none;
+  padding: 0;
+  float: left;
+}
+.zsl-recent-posts .thumb li img {
+  width: 100%;
+}
+.zsl-recent-posts .thumb li.even {
+  margin-right: 0;
+}
+.zsl-recent-posts .thumb-title p {
+  margin-bottom: 0.3em;
+}
+.zsl-recent-posts .thumb-title span {
+  font-size: 0.7em;
+  padding: 0.2em 0.6em 0.4em;
+}
+
+/* ----------------------------------------------------------------------------------------------------------
+04 Queries --------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */
+/* 400 and up */
+/* ----------------------------------------------------------------------------------------------------------
+05 Retina screens -------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------- */

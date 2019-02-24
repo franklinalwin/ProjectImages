@@ -1,0 +1,40 @@
+.medal_table {
+    border-collapse: collapse;
+    font-family:"Arial", sans-serif;
+    font-size:16px;
+}
+.medal_table th {
+    padding: 10px 40px 10px 0px;
+}
+.medal_table td {
+    padding: 10px 20px 10px 2px;
+    color: white;
+}
+.medal_table tr:nth-child(2n) {
+    background-color:#ff007f;
+    color: white;
+}
+.medal_table td:first-child {
+    font-style:italic;
+    color: white;
+    padding-right:20px;
+    padding-left:20px;
+      background-color:##423b3f;
+}
+.medal_table td:nth-child(3) {
+    padding-right:40px;
+    color: white;
+}
+.medal_table th:last-child,
+.medal_table td:last-child {
+    font-weight:bold;
+    text-align:right;
+    padding-right:20px;
+    color: white;
+}
+.medal_table .imgpad{
+  padding-left: 0px;
+}
+.medal_table .medal_title{
+  padding-left: 15px;
+}
